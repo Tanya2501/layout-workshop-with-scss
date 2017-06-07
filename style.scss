@@ -1,0 +1,947 @@
+$color1: #fff;
+$color2: #212429;
+$color3: #555;
+$color4: #999;
+$color5: #212121;
+$color6: #000;
+$color7: #f4f4f4;
+$color8: #DDDDDD;
+$color10: #17191c;
+$fontWeight1: 400;
+$fontWeight2: 600;
+$fontWeight3: 700;
+$fontWeight4: bold;
+$boxShadow1: 0 0 1px 0 #E8E8E8;
+
+
+@mixin font-face($style-name, $file, $family) {
+    $filepath: "fonts/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+        font-weight: normal;
+        font-style: normal;
+}
+
+* {
+   @include font-face(Hind, Hind-Regular, Hind);
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+
+    min-height: 100%;
+    margin: 0 auto;
+
+    color: $color1;
+    background-color: #f9f9fc;
+}
+
+.littleWrapper {
+    position: relative;
+    top: -345px;
+
+    width: 1530px;
+    margin: 0 auto;
+}
+
+.backSide {
+    min-width: 1638px;
+    height: 345px;
+
+    background-color: $color2;
+}
+
+header {
+    display: inline-block;
+
+    height: 55px;
+
+    vertical-align: middle;
+
+    background-color: $color2;
+}
+
+.wrapper {
+    width: 1638px;
+    margin: 0 auto;
+}
+
+div {
+    .menu {
+        display: table-cell;
+
+        width: 62px;
+        height: 55px;
+        margin-top: -38px;
+
+        text-align: center;
+        vertical-align: middle;
+
+        border-right: 1px solid #333;
+        border-left: 1px solid #333;
+        i {
+            font-size: 20px;
+        }
+
+        &:hover {
+            background-color: $color3;
+        }
+    }
+
+    .logo {
+        display: table-cell;
+
+        width: 1200px;
+        height: 55px;
+        margin-left: -5px;
+        padding-top: 3px;
+
+        vertical-align: middle;
+        a {
+            font-size: 22px;
+            font-weight: $fontWeight4;
+            margin-top: -1px;
+            padding-left: 657px;
+
+            text-decoration: none;
+            letter-spacing: 4px;
+
+            color: $color2;
+            span {
+                font-size: 20px;
+                font-weight: $fontWeight2;
+
+                margin-left: 5px;
+
+                letter-spacing: 6.5px;
+                letter-spacing: 6;
+                &:hover {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .firstIcon {
+        width: 55px;
+    }
+
+    .secondIcon {
+        width: 55px;
+    }
+
+    .thirdIcon {
+        width: 50px;
+    }
+
+    .forthIcon {
+        width: 49px;
+    }
+
+    .fifthIcon {
+        width: 55px;
+    }
+
+    .postText {
+        font-size: 40px;
+        font-weight: $fontWeight3;
+        line-height: 50px;
+
+        position: absolute;
+        top: 268px;
+
+        padding-left: 99px;
+
+        text-align: left;
+        letter-spacing: 6.8px;
+
+        text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.44);
+    }
+
+    .postTextLeft {
+        i {
+            font-size: 10px;
+
+            width: 8px;
+            margin-right: 2px;
+        }
+    }
+
+    .subscribe {
+        display: inline-block;
+        p {
+            @include font-face(Montserrat, Montserrat-Regular, Montserrat);
+            font-size: 20px;
+            font-weight: $fontWeight3;
+
+            margin-top: -4px;
+            margin-left: 30px;
+
+            text-align: left;
+            letter-spacing: 4px;
+
+            color: $color3;
+        }
+    }
+
+    .column {
+        display: inline-block;
+        float: left;
+
+        width: 360px;
+    }
+
+    div {
+        .column:not(:last-child) {
+            margin-right: 30px;
+        }
+        
+        .aboutPeople {
+            margin-top: -54px;
+            padding-bottom: 20px;
+
+            letter-spacing: 0.7px;
+
+            border-bottom: 1px solid #fff;
+        }
+
+        .aboutPeopleSecond {
+            margin-top: -30px;
+
+            letter-spacing: 0.7px;
+        }
+    }
+
+    .readButton {
+        &:hover {
+            background-color: #dcdcdc;
+        }
+    }
+
+    .forImage {
+        height: 256px;
+        margin: -49px -30px 0 -30px;
+
+        background-color: $color7;
+    }
+
+    .borderWithout {
+        width: 100px;
+        margin-top: 38px;
+
+        border: none;
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+    }
+
+    .iconBoxMiddle {
+        top: -20px;
+        left: 129px;
+    }
+
+    .followMe {
+        h3 {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+nav {
+    display: table-cell;
+
+    height: 55px;
+
+    text-align: center;
+    vertical-align: middle;
+    ul {
+        list-style-type: none;
+
+        vertical-align: middle;
+        div {
+            display: inline-block;
+
+            height: 55px;
+
+            border-right: 1px solid #333;
+        }
+    }
+
+    a {
+        height: 55px;
+        margin: 19 0;
+        margin-top: 19px;
+
+        text-align: center;
+        text-decoration: none;
+
+        color: $color1;
+    }
+
+    li {
+        display: table-cell;
+
+        height: 55px;
+        padding-top: 3px;
+
+        vertical-align: middle;
+
+        border-right: 1px solid #333;
+        &:hover {
+            background-color: $color3;
+        }
+    }
+}
+
+.arrow {
+    font-size: 24px;
+}
+
+.firstNetwork {
+    border-left: 1px solid #333;
+}
+
+.littlePostText {
+    font-size: 18px;
+    font-weight: $fontWeight2;
+
+    letter-spacing: 3.4px;
+}
+
+.postTextLeft {
+    font-size: 12.3px;
+    font-weight: $fontWeight2;
+
+    position: absolute;
+    top: 319px;
+    right: -61px;
+
+    transform: rotate(-90deg);
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.navigSlide {
+    background-color: $color4;
+}
+
+.subscribes {
+    width: 1530px;
+    margin: 0 auto;
+    margin-top: -4px;
+}
+
+.allBoxes {
+    width: 1530px;
+    margin: 0 auto;
+    margin-top: -3px;
+    padding-bottom: 118px;
+
+    text-align: center;
+    &:after {
+        display: block;
+        visibility: hidden;
+        clear: both;
+
+        height: 0;
+
+        content: '';
+    }
+}
+
+form {
+    position: absolute;
+
+    display: inline-block;
+}
+
+input {
+    font-size: 15px;
+
+    box-sizing: border-box;
+    width: 450px;
+    height: 50px;
+
+    letter-spacing: 1.1px;
+
+    border: 1px solid $color8;
+    background-color: $color1;
+    box-shadow: $boxShadow1;
+}
+
+.nameForm {
+    margin-left: 50px;
+}
+
+.emailForm {
+    margin-left: 30px;
+}
+
+.subscribeButton {
+    display: inline-block;
+
+    width: 282px;
+    height: 50px;
+    margin-left: 21px;
+
+    text-align: center;
+    letter-spacing: 3px;
+
+    color: $color1;
+    border: 1px solid $color8;
+    background-color: $color5;
+    box-shadow: $boxShadow1;
+}
+
+.subscribeLine {
+    margin-bottom: 102px;
+}
+
+.wrapperBoxes {
+    display: inline-block;
+
+    margin: 0 auto;
+}
+
+.allBox {
+    position: relative;
+
+    padding: 50px 30px 0 30px;
+
+    letter-spacing: 0.9px;
+
+    border: 1px solid $color8;
+    background-color: $color1;
+    box-shadow: $boxShadow1;
+    &:hover {
+        box-shadow: 0 3px 25.52px 3.48px rgba(112, 112, 112, 0.49);
+    }
+}
+
+.boxTravel {
+    height: 481px;
+    margin-bottom: 28px;
+
+    text-align: center;
+
+    background-color: $color1;
+}
+
+section {
+    .boxTravel {
+        p {
+            height: 155px;
+        }
+    }
+
+    h2 {
+        @include font-face(Montserrat, Montserrat-Regular, Montserrat);
+        font-size: 20px;
+
+        margin-top: 11px;
+        margin-bottom: 11px;
+
+        color: $color3;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 28px;
+
+        margin-top: 19px;
+
+        text-align: center;
+
+        color: $color5;
+    }
+
+    .boxTravelling {
+        p {
+            height: 238px;
+        }
+    }
+
+    .boxBlack {
+        p {
+            height: 183px;
+        }
+    }
+
+    .boxVideo {
+        p {
+            height: 70px;
+        }
+    }
+
+    .boxStyle {
+        p {
+            height: 71px;
+        }
+    }
+
+    .boxPost {
+        p {
+            height: 155px;
+        }
+    }
+}
+
+h4 {
+    font-size: 12px;
+
+    margin-left: -14px;
+
+    letter-spacing: 2.5px;
+
+    color: $color4;
+}
+
+.readButton {
+    font-weight: $fontWeight4;
+
+    display: inline-block;
+
+    margin-top: 32px;
+
+    color: $color6;
+    border-right: 1px solid #999;
+    border-left: 1px solid #999;
+    background-color: $color1;
+    a {
+        font-size: 14px;
+        font-weight: $fontWeight4;
+
+        letter-spacing: 3px;
+    }
+}
+
+.readButtonSecond {
+    margin-top: 37px;
+}
+
+.boxFree {
+    height: 513px;
+    margin-bottom: 30px;
+
+    background-color: $color1;
+}
+
+.boxTravelling {
+    height: 489px;
+
+    background: url(picture/fon.png) 100% 100% no-repeat;
+    background-size: cover;
+    h4 {
+        margin-top: -14px;
+        margin-bottom: 23px;
+    }
+
+    .secondH {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+.boxImage {
+    height: 553px;
+    margin-bottom: 47px;
+}
+
+.boxBlack {
+    height: 329px;
+    margin-bottom: 47px;
+
+    color: $color1;
+    background-color: $color6;
+    h5 {
+        font-size: 13.4px;
+        font-weight: $fontWeight1;
+
+        margin-top: 25px;
+
+        letter-spacing: 1.7px;
+    }
+}
+
+#blackFon {
+    font-size: 17px;
+    line-height: 28px;
+
+    margin-top: 2px;
+
+    letter-spacing: 1.5px;
+
+    color: $color1;
+}
+
+.boxVideo {
+    height: 565px;
+}
+
+.forVideo {
+    position: relative;
+
+    width: 360;
+    height: 256px;
+    margin: -54px -30px 0 -30px;
+
+    background-color: $color7;
+}
+
+.after {
+    margin-top: 36px;
+}
+
+.signature {
+    width: 361px;
+    height: 147px;
+    margin-top: 2px;
+
+    background-color: #3a3c49;
+        p {
+        @include font-face(MrsSaintDelafield, MrsSaintDelafield-Regular, MrsSaintDelafield);
+        font-size: 36.05px;
+        font-weight: $fontWeight1;
+
+        position: absolute;
+        right: 18px;
+        bottom: 17px;
+
+        transform: rotate(-8.785deg);
+        text-align: right;
+        letter-spacing: 1px;
+    }
+}
+
+.miniFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.boxStyle {
+    height: 399px;
+    margin-bottom: 27px;
+}
+
+.boxAwesome {
+    height: 555px;
+    margin-bottom: 48px;
+}
+
+.galeryImage {
+    display: inline-block;
+
+    width: 360px;
+    height: 256px;
+    margin: -51px -32px 0 -35px;
+}
+
+.galery {
+    display: inline-block;
+
+    width: 181px;
+    height: 128px;
+    margin: 0 -5px -9px -0;
+
+    border-bottom: 1px solid $color8;
+}
+
+.firstGalery {
+    border-right: 1px solid $color8;
+}
+
+.thirdGalery {
+    border-right: 1px solid $color8;
+}
+
+.borderForButton {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.boxLink {
+    height: 177px;
+    margin-bottom: 46px;
+
+    background-color: $color6;
+    p {
+        margin-top: 9px;
+
+        letter-spacing: 0.5px;
+    }
+}
+
+.boxWindow {
+    height: 289px;
+
+    background-color: $color6;
+}
+
+.boxClear {
+    height: 513px;
+    margin-bottom: 45px;
+}
+
+.boxPost {
+    height: 482px;
+    margin-bottom: 47px;
+}
+
+.boxAudio {
+    height: 454px;
+}
+
+.circleBlock {
+    display: inline-block;
+
+    width: 135px;
+    height: 135px;
+    margin-top: 25px;
+
+    border-radius: 50%;
+    background-color: $color4;
+}
+
+.iconBox {
+    position: absolute;
+    top: -20px;
+    left: 160px;
+
+    width: 40px;
+    height: 35px;
+
+    background-color: $color5;
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.afterImage {
+    position: relative;
+
+    padding-top: 48px;
+}
+
+.fa-quote-left {
+    color: $color6;
+}
+
+.fa-link {
+    font-size: 20px;
+
+    transform: rotate(-90deg);
+
+    color: $color6;
+}
+
+.blackIcon {
+    font-size: 17px;
+    line-height: 28px;
+
+    background-color: $color1;
+    box-shadow: 0 1px 3px 0 rgba(213, 213, 213, 0.75);
+}
+
+.fa-th-large {
+    color: $color6;
+}
+
+.visib {
+    z-index: 1;
+}
+
+.iconFooter {
+    font-size: 13px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 360px;
+    height: 60px;
+    padding: 20px 30px 0 30px;
+
+    text-align: left;
+
+    color: $color6;
+    border-top: 1px solid $color8;
+}
+
+.iconFooterText {
+    display: inline-block;
+
+    letter-spacing: 2.3px;
+    div {
+        &:hover {
+            color: $color7;
+        }
+    }
+
+    i {
+        font-size: 14px;
+    }
+}
+
+.iconFooterTextSocial {
+    font-size: 14px;
+
+    display: inline-block;
+
+    letter-spacing: 7.7px;
+}
+
+i {
+    &:hover {
+        color: $color8;
+    }
+}
+
+.fa-dribbble {
+    margin-left: 60px;
+}
+
+footer {
+    font-weight: lighter;
+
+    position: absolute;
+    bottom: -412px;
+    left: 0;
+
+    height: 412px;
+
+    background-color: $color6;
+    div {
+        .latestComment {
+            margin-right: 0;
+            a {
+                text-decoration: none;
+
+                color: $color1;
+            }
+        }
+    }
+}
+
+.wrapperForFooter {
+    position: relative;
+
+    width: 1530px;
+    margin: 0 auto;
+}
+
+.finish {
+    width: 100%;
+    height: 371px;
+
+    letter-spacing: 0.9px;
+
+    background-color: $color2;
+    div {
+        line-height: 28px;
+
+        position: relative;
+
+        display: inline-block;
+        display: inline-block;
+        float: left;
+
+        width: 360px;
+        margin-right: 30px;
+        padding: 54px 0 54px 0;
+
+        text-align: left;
+        letter-spacing: 0.9px;
+        h3 {
+            font-size: 16px;
+
+            margin-bottom: 23px;
+
+            letter-spacing: 2.7px;
+            p {
+                line-height: 28px;
+
+                letter-spacing: 0.94px;
+            }
+        }
+
+        img {
+            width: 118px;
+            height: 98px;
+            margin-top: -7px;
+            margin-right: -2px;
+
+            background-color: #f9f9fb;
+        }
+    }
+}
+
+.lastLine {
+    height: 41px;
+    padding-top: 10px;
+
+    text-align: center;
+
+    background-color: $color10;
+    div {
+        display: inline-block;
+
+        margin-left: 17px;
+        padding-right: 17px;
+    }
+}
+
+.backSideFooter {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+
+    width: 100%;
+    min-width: 1638px;
+    height: 412px;
+
+    background-color: $color2;
+}
+
+.backSideFooterLine {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+
+    width: 100%;
+    height: 41px;
+
+    background-color: $color10;
+}
+
+.secondIconFooter {
+    width: 20px;
+}
+li {
+    list-style-type: none;
+}
+
+table {
+    td {
+        line-height: 29px;
+
+        vertical-align: top;
+        letter-spacing: 0.6px;
+        i {
+            .secondIconFooter {
+                font-size: 14px;
+            }
+        }
+    }
+}
